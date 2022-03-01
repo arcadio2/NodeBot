@@ -1,7 +1,8 @@
 
-const  conocimiento =  require('../conversations/conocimiento.json'); 
-
+const  {conocimiento} =  require('../conversations/conocimiento.json'); 
+const {curiosidades} =  require('../conversations/conocimiento.json'); 
 const funciones = {}
+
 funciones.botones = () =>{
     let preguntas = []; 
 
@@ -23,6 +24,12 @@ funciones.botones = () =>{
 
     console.log(preguntas)
     return preguntas;
+}
+
+funciones.curiosidad = ()=>{
+    let aleatorio = Math.floor(Math.random() * curiosidades.length)
+
+    return curiosidades[aleatorio].curiosidad;
 }
 
 funciones.procesado = (texto)=>{
