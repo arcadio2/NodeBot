@@ -1,4 +1,6 @@
-const {Telegraf} = require('telegraf');
+const { Telegraf } = require('telegraf');
+
+
 
 const funciones = require('./functions/combinaciones');
 
@@ -10,6 +12,7 @@ const bot = new Telegraf('5065236815:AAGEdgbxqPNTRmU_o7L_SxKy6jWRtpGM-So');
 /* Cuando se ejecuta el comando "/start en el bot" */
 bot.start( (ctx)=>{
     console.log(ctx.from)
+    
     ctx.reply(`Bienvenido al chat de herbolaria ${ctx.from.first_name}, prueba /help`)
 })
 
@@ -21,24 +24,29 @@ bot.help( (ctx)=>{
     \nIncluso puedes escribir "curiosidades de las plantas" ó "curiosidades" para conocer alguna `)
 })
 
+/**COmando settings */
 bot.settings( (ctx)=>{
     ctx.reply('Aquí va la configuracion')
 })
 
 /*TEXTOS en especifico */
-bot.hears(['hola','Hola'], (ctx) =>{
+bot.hears(['hola','Hola','HOla','ola'], (ctx) =>{
     text = "Hey! Estoy para ayudarte :) puedo \n A) Brindarte información sobre plantas medicinales  \n B) Hacer un poco de platica ";
     text+="\nPrueba el comando /help para brindarte ayuda" 
     ctx.reply(text)
 })
 
-conocimiento.forEach(preguntas=>{ 
+
+
+conocimiento.forEach( preguntas=>{ 
     //console.log(preguntas.pregunta+ '  '+ preguntas.respuesta)
-    bot.hears(preguntas.pregunta+'',(ctx)=>{
+    bot.hears(preguntas.pregunta+'',(ctx)=>{ 
         ctx.reply(preguntas.respuesta+'')
     })
 })
+
 bot.hears(['curiosidades','Curiosidades','curiosidades de las plantas','Curiosidades de las plantas'], (ctx)=>{
+    
     ctx.reply(`Aquí una curiosidad:\n${funciones.curiosidad()}`)
 })
 
@@ -57,7 +65,8 @@ bot.hears(['curiosidades','Curiosidades','curiosidades de las plantas','Curiosid
 
 bot.command('paginas',(ctx)=>{
    /*  ctx.reply('My custom command') */
-   ctx.telegram.sendMessage(ctx.chat.id,'<i>Estamos en</i> <b>construccion</b>',
+
+    ctx.telegram.sendMessage(ctx.chat.id,'<i>Algunas paginas que te podrían dar</i> <b>información</b>',
     {
         reply_markup:{
             inline_keyboard:[
@@ -88,7 +97,8 @@ bot.command(["preguntas","Preguntas","pReguntas"],(ctx)=>{
         reply_markup:{
         
             keyboard:[
-                preguntas
+                preguntas,
+                [{text:"/preguntas"}]
             ]
         }
     }
