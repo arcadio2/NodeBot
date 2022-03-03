@@ -38,11 +38,12 @@ bot.hears(['hola','Hola','HOla','ola'], (ctx) =>{
     ctx.reply(text)
 })
 
-
+ 
 
 conocimiento.forEach( preguntas=>{ 
     //console.log(preguntas.pregunta+ '  '+ preguntas.respuesta)
     if(preguntas.pregunta.length<=10 ){
+        
         bot.hears( funciones.procesado(preguntas.pregunta+'') ,(ctx)=>{ 
             ctx.reply(preguntas.respuesta+'')
         })
