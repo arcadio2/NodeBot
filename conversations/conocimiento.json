@@ -6,8 +6,12 @@
             "respuesta":"No. Los seres humanos y otros animales, como chimpancés, guacamayas, elefantes, lagartijas, venados, utilizan sustancias químicas de las plantas para aliviar algunos malestares, prevenir enfermedades, eliminar parásitos o ayudar a la digestión. (Alamilla & Neyra, 2020, párr. 1)"
         },
         {
-            "pregunta":"ok",
-            "respuesta":"ok"
+            "pregunta":"¿Cómo estas?",
+            "respuesta":"Estoy en un servidor"
+        },
+        {
+            "pregunta":"xd",
+            "respuesta":"xd"
         },
         {
             "pregunta":"¿Desde cuándo se han utilizado plantas medicinales?",
@@ -23,7 +27,7 @@
         },
         {
             "pregunta":"Ejemplos de plantas medicinales",
-            "respuesta":""
+            "respuesta":"Aloe vera: beneficios para la piel. \n Valeriana: relajante utilizado para aliviar el estrés. \n Lavanda: es utilizada como relajante, favorece la circulación sanguínea, mejora el sistema respiratorio, y tiene grandes propiedades cicatrizantes.  \n Tomillo: utilizado para aliviar dolores de garganta, Además de esto, tiene un alto contenido de en vitamina C, cobre, hierro y manganeso. Y es repelente natural de mosquitos. \n Perejil: Gracias a su vitamina K y C ayuda a fortalecer los huesos y reforzar nuestro sistema inmunológico. Además, es un antioxidante natural. \n Menta: ayuda a aliviar la congestión nasal y de garganta.  "
         },
         {
             "pregunta":"¿Los seres humanos son los únicos que utilizan plantas medicinales?",
@@ -54,7 +58,7 @@
             "respuesta":"La herbolaria es un recurso básico de la medicina popular, pero nuestro conocimiento de ella es escaso e impreciso (Secretaría de Medio Ambiente y Recursos Naturales, 2021, párr. 17). Pese a que existen principios activos o compuestos químicos de las especies vegetales que constituyen los ingredientes primarios que la industria farmacéutica utiliza en algunos de sus medicamentos comerciales patentados (Secretaría de Medio Ambiente y Recursos Naturales, 2021, párr. 6). Es importante tomar en cuenta que antes de utilizar cualquier planta medicinal para tratar algún padecimiento, sobre todo aquellos que son de alto riesgo, se sugiere primero consultar con un médico, ya que no se recomienda sustituir un tratamiento prescrito por un remedio casero. (Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias, 2020, párr. 16) "
         },
         {
-            "pregunta":"¿Puedo cultivar plantas medicinales? ",
+            "pregunta":"¿Puedo cultivar plantas medicinales?",
             "respuesta":"Sí, de hecho, las plantas medicinales son muy fáciles de cultivar y no necesitas un gran espacio a continuación te muestro una lista de algunas plantas medicinales que puedes cultivar en casa: "
         },
         {
@@ -84,7 +88,7 @@
             "pregunta":"¿Te gustan las plantas?",
             "respuesta":"Me encantan, por eso mi función es ayudarte brindandote infromación"
         },
-    
+        
     
     
     
@@ -105,37 +109,82 @@
     ],
     "curiosidades":[
         {
-            "curiosidad":"Las plantas medicinales fueron descubiertas por los animales, el humano los observó y lo usaron de igual manera"
+            "curiosidad":"Las plantas medicinales fueron descubiertas por los animales, el humano los observó y lo usaron de igual manera",
+            "url":"https://t1.ev.ltmcdn.com/es/posts/5/2/4/fitoterapia_que_es_y_como_usar_las_plantas_medicinales_3425_orig.jpg"
+        },
+        {
+            "curiosidad":"Los remedios naturales son eficientes en adultos y pequeños; la manzanilla les ayuda a dormir mejor.",
+            "url":"https://www.pastillasparadormir.info/wp-content/uploads/2020/10/te-de-manzanilla-para-dormir-1024x683.jpg"
             
         },
         {
-            "curiosidad":"Los remedios naturales son eficientes en adultos y pequeños; la manzanilla les ayuda a dormir mejor."
+            "curiosidad":"El aguacate es sumamente beneficioso para tu cabello; es capaz de mantenerlo fuerte, opaco y seco.",
+            "url":"https://www.secretodamiga.com/wp-content/uploads/2017/04/aguacate-pelo.jpg"
         },
         {
-            "curiosidad":"El aguacate es sumamente beneficioso para tu cabello; es capaz de mantenerlo fuerte, opaco y seco."
+            "curiosidad":"La granada contribuye a la prevención de la disfunción eréctil en el hombre, y aumenta las hormonas femeninas en la mujer, además de retrasar el envejecimiento y proteger contra alzheimer.",
+            "url":"https://laopinion.com/wp-content/uploads/sites/3/2020/01/shutterstock_528908860.jpg?quality=80&strip=all"
         },
         {
-            "curiosidad":"La granada contribuye a la prevención de la disfunción eréctil en el hombre, y aumenta las hormonas femeninas en la mujer, además de retrasar el envejecimiento y proteger contra alzheimer."
+            "curiosidad":"Plantas como la alcachofa, la cola de caballo, el Aloe Vera y el perejil, son ideales para perder peso.",
+            "url":"https://k62.kn3.net/taringa/E/E/8/E/5/F/RomiCu84/BFD.jpg"
+
         },
         {
-            "curiosidad":"Plantas como la alcachofa, la cola de caballo, el Aloe Vera y el perejil, son ideales para perder peso."
+            "curiosidad":"Plantas como la granada o el arándano rojo, son perfectas para reducir la posibilidad de sufrir algunos tipos de cáncer.",
+            "url":"https://2.bp.blogspot.com/--cssann1Y0s/VQ8D7QHNuWI/AAAAAAAAG3c/pGdsqiWb4dE/s1600/ZUMO.jpg"
         },
         {
-            "curiosidad":"Plantas como la granada o el arándano rojo, son perfectas para reducir la posibilidad de sufrir algunos tipos de cáncer."
+            "curiosidad":" Existen dos tipos de ginseng; el asiático, que produce energía, y el americano, cuyo efecto es contrario (seda, relaja).",
+            "url": "http://misremedios.com/wp-content/uploads/2016/04/Ginseng-6.jpg"
         },
         {
-            "curiosidad":" Existen dos tipos de ginseng; el asiático, que produce energía, y el americano, cuyo efecto es contrario (seda, relaja)."
+            "curiosidad":"Y hablando de relajación, existen muchas plantas que, a modo de infusión, te ayudan a conciliar el sueño. La lavanda, la tila o la amapola, son tres de ellas.",
+            "url":"https://topdormitorios.com/blog/wp-content/uploads/2019/11/tips-dormir-bien.jpg"
         },
         {
-            "curiosidad":"Y hablando de relajación, existen muchas plantas que, a modo de infusión, te ayudan a conciliar el sueño. La lavanda, la tila o la amapola, son tres de ellas."
+            "curiosidad":"La tisana de perejil era usada por Cristóbal Colón para librarse de los dolores de la gota.",
+            "url":"https://assets.soycarmin.com/__export/1550246744985/sites/debate/img/2019/02/15/infusion-de-perejil_crop1550245889641.jpg_673822677.jpg"
         },
         {
-            "curiosidad":"La tisana de perejil era usada por Cristóbal Colón para librarse de los dolores de la gota.            "
-        },
-        {
-            "curiosidad":"El diente de león ayuda mucho a personas con eczemas, psoriasis y otros problemas de la piel."
+            "curiosidad":"El diente de león ayuda mucho a personas con eczemas, psoriasis y otros problemas de la piel.",
+            "url":"http://www.fmdos.cl/wp-content/uploads/2016/11/Diente-de-leon-2.jpg"
         }
 
+    ],
+    "plantas":[
+        {
+            "nombre":"Cannabis",
+            "desc":"Planta con diversos beneficios"
+        },
+        {
+            "nombre":"Menta",
+            "desc":"ayuda a aliviar la congestión nasal y de garganta. "
+        },
+        {
+            "nombre":"Perejil",
+            "desc":"Gracias a su vitamina K y C ayuda a fortalecer los huesos y reforzar nuestro sistema inmunológico. Además, es un antioxidante natural.  "
+        },
+        {
+            "nombre":"Tomillo",
+            "desc":"utilizado para aliviar dolores de garganta, Además de esto, tiene un alto contenido de en vitamina C, cobre, hierro y manganeso. Y es repelente natural de mosquitos.  "
+        },
+        {
+            "nombre":"Lavanda",
+            "desc":" Es utilizada como relajante, favorece la circulación sanguínea, mejora el sistema respiratorio, y tiene grandes propiedades cicatrizantes.    "
+        },
+        {
+            "nombre":"valeriana",
+            "desc":"relajante utilizado para aliviar el estrés. "
+        },
+        {
+            "nombre":"Aloe vera",
+            "desc":"beneficios para la piel. "
+        },
+        {
+            "nombre":"Hierbabuena",
+            "desc":" por sus propiedades, es utilizada para el tratamiento de nauseas, vomito y desordenes gastrointestinales. Así mismo se usa para la fabricación de productos de higiene bucal.  "
+        }
     ]
 }
 

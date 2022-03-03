@@ -5,7 +5,7 @@ const { Telegraf } = require('telegraf');
 const funciones = require('./functions/combinaciones');
 
 const  {conocimiento} =  require('./conversations/conocimiento.json'); 
-
+const {plantas} = require('./conversations/conocimiento.json'); 
 
 const bot = new Telegraf('5065236815:AAGEdgbxqPNTRmU_o7L_SxKy6jWRtpGM-So');
 
@@ -21,7 +21,9 @@ bot.help( (ctx)=>{
     ctx.reply(`Hola, soy un chat de herbolaria, puedo ayudarte resolviendo algunas dudas si escribes /preguntas 
     o si preguntas alguna cosa de la que tenga conocimiento \nTambién puedes escribir /paginas para
     brindarte páginas con información útil
-    \nIncluso puedes escribir "curiosidades de las plantas" ó "curiosidades" para conocer alguna `)
+    \nIncluso puedes escribir "curiosidades" para conocer alguna 
+    \nTambién puedes poner /planta para darte información de una planta aleatoria o escribir el nombre de
+    alguna de tu gusto, ejemplo:"Cannabis"`)
 })
 
 /**COmando settings */
@@ -40,14 +42,31 @@ bot.hears(['hola','Hola','HOla','ola'], (ctx) =>{
 
 conocimiento.forEach( preguntas=>{ 
     //console.log(preguntas.pregunta+ '  '+ preguntas.respuesta)
-    bot.hears(preguntas.pregunta+'',(ctx)=>{ 
-        ctx.reply(preguntas.respuesta+'')
+    if(preguntas.pregunta.length<=10 ){
+        bot.hears( funciones.procesado(preguntas.pregunta+'') ,(ctx)=>{ 
+            ctx.reply(preguntas.respuesta+'')
+        })
+    }else{
+        bot.hears(preguntas.pregunta+'',(ctx)=>{ 
+            ctx.reply(preguntas.respuesta+'')
+        })
+    } 
+    
+})
+//plantas
+plantas.forEach(planta=>{
+    bot.hears(funciones.procesado(planta.nombre+''),(ctx)=>{ 
+        ctx.reply(planta.desc+'') 
     })
 })
 
-bot.hears(['curiosidades','Curiosidades','curiosidades de las plantas','Curiosidades de las plantas'], (ctx)=>{
+bot.hears(funciones.procesado("curiosidades"), (ctx)=>{
+    const curiosity = funciones.curiosidad() //sin eso ya, nomas hay que cambiar el help
+    ctx.reply(`Aquí una curiosidad:\n${curiosity.curiosidad}`)
+    if(curiosity.url){
+        ctx.replyWithPhoto(curiosity.url)
+    }
     
-    ctx.reply(`Aquí una curiosidad:\n${funciones.curiosidad()}`)
 })
 
 
@@ -86,11 +105,21 @@ bot.command('paginas',(ctx)=>{
         parse_mode:"HTML",
     })
 })
+bot.command(["planta","plantas","plantita"],(ctx)=>{
+    const planta = funciones.descPlantas();
 
-bot.command(["preguntas","Preguntas","pReguntas"],(ctx)=>{
-    
+    ctx.replyWithHTML('<b>'+planta.nombre+'</b>')
+
+    ctx.replyWithHTML(`<i>${planta.desc}</i>`)/* ,{ reply_markup:{}, parse_mode:"HTML" } );*/
+
+})
+
+//bot.command(["preguntas","Preguntas","pReguntas"],(ctx)=> {
+bot.command(funciones.procesado("preguntas", [], 0) ,(ctx)=>{///
+    //dice que se uso muchas veces la recursion
     //Obtiene las preguntas aleatorias
     const preguntas = funciones.botones(); 
+    console.log(funciones.procesado("preguntas")) //regresa undefinied, hmm
 
     ctx.reply("Algunas preguntas que podrías hacer",
     {   
