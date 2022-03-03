@@ -97,8 +97,7 @@ bot.command('paginas',(ctx)=>{
                 {text:"Plantas para la ansiedad", url:"https://www.mayoclinic.org/es-es/diseases-conditions/generalized-anxiety-disorder/expert-answers/herbal-treatment-for-anxiety/faq-20057945"},],
                     //fila 3
                 [{text:"Curiosidades de plantas", url:"https://www.ecologiaverde.com/curiosidades-de-las-plantas-3535.html"},
-                {text:"5", url:"www.mediavida.com"}, //pendiente
-                {text:"6", url:"www.mediavida.com"}],//pendiente
+                ],//pendiente
                     
                 
             ]
@@ -128,7 +127,12 @@ bot.command(funciones.procesado("preguntas", [], 0) ,(ctx)=>{///
         
             keyboard:[
                 preguntas,
-                [{text:"/preguntas"}]
+                [
+                    {text:"/preguntas"},
+                    {text:"curiosidades"},
+                    {text:"/planta"}
+                ]
+                
             ]
         }
     }
